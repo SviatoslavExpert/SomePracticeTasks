@@ -39,6 +39,10 @@ public class Demo {
         System.out.println("This is the name of cat5: " + cat5.getName());
         System.out.println("This is the age of cat3: " + cat3.getAge());
         System.out.println();
+        //  dog is created
+        Dog dog1 = create("Baikal", "red", "big", 5, true);
+        System.out.println(dog1);
+        dog1.bark();
 
     }
 }
