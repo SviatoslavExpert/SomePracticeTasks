@@ -1,11 +1,13 @@
 package com.granovskiy;
 
+import static com.granovskiy.Factory.*;
+
 public class Demo {
     public static void main(String[] args) {
         //  creating cats
         Cat cat1 = Cat.of("Vaska", 2);
         Cat cat2 = Cat.of("Tom", 1);
-        Cat cat3 = Cat.of("Mike", "Pavel", 2);
+        Cat cat3 = Cat.of("Mike", 2);
         Cat cat4 = cat2;
         Cat cat5 = cat3;
         //  printing to console
@@ -16,6 +18,8 @@ public class Demo {
         System.out.println(cat5);
         //  making cat5 meow
         cat5.meow(3);
-
+        //  cat6 made with Factory
+        Cat cat6 = create("Bob", 5);
+        System.out.println(cat6);
     }
 }
