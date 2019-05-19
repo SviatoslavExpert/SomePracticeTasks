@@ -11,6 +11,12 @@ public class Demo {
         Dog dog1 = Dog.of("Bob", "meat", 5, 5.2, false, "Mike", 10);
         System.out.println(dog1);
         makeVoice(dog1);
+        System.out.println();
+        //  Chicken object works
+        Chicken chicken1 = Chicken.of("Little", "wheet", 1, 1.2, true, "medium", "white");
+        System.out.println(chicken1);
+        makeVoice(chicken1);
+
     }
 
     public static void makeVoice(Animal a) {

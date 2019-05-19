@@ -30,6 +30,10 @@ public class Chicken extends Animal {
     }
 
     //  methods
+    public static Chicken of(String name, String ration, int age, double weight, boolean isSex, String size, String type) {
+        return new Chicken(name, ration, age, weight, isSex, size, type);
+    }
+
     @Override
     public void getVoice() {
         System.out.println("Kud-ku-da");
@@ -40,7 +44,7 @@ public class Chicken extends Animal {
         return "Chicken{" +
                 "size='" + size + '\'' +
                 ", type='" + type + '\'' +
-                super.toString() +
+                ", " + super.toString() +
                 '}';
     }
 }
