@@ -6,8 +6,11 @@ public class Dog extends Animal {
     private int education;
 
     // constructor
-    public Dog(String name, String ration, int age, double weight, boolean isSex, int education) {
+
+
+    public Dog(String name, String ration, int age, double weight, boolean isSex, String masterName, int education) {
         super(name, ration, age, weight, isSex);
+        this.masterName = masterName;
         this.education = education;
     }
 
@@ -29,6 +32,10 @@ public class Dog extends Animal {
     }
 
     //  methods
+    public static Dog of(String name, String ration, int age, double weight, boolean isSex, String masterName, int education) {
+        return new Dog(name, ration, age, weight, isSex, masterName, education);
+    }
+
     @Override
     public void getVoice() {
         System.out.println("Bark-bark-bark!");
@@ -39,7 +46,7 @@ public class Dog extends Animal {
         return "Dog{" +
                 "masterName='" + masterName + '\'' +
                 ", education=" + education +
-                super.toString() +
+                ", " + super.toString() +
                 '}';
     }
 }

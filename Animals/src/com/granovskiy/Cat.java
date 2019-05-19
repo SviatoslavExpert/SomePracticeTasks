@@ -44,7 +44,7 @@ public class Cat extends Animal {
         return "Cat{" +
                 "type='" + type + '\'' +
                 ", color='" + color + '\'' +
-                super.toString() +
+                ", " + super.toString() +
                 '}';
     }
 }
