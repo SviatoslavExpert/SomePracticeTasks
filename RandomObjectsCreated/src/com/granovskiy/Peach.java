@@ -1,7 +1,7 @@
 package com.granovskiy;
 
 public class Peach extends Fruit{
-    String name;
+    private String name;
 
     public Peach(int age, int taste, String name) {
         super(age, taste);

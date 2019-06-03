@@ -1,7 +1,7 @@
 package com.granovskiy;
 
 public class Apple extends Fruit {
-    String name;
+    private String name;
 
     public Apple(int age, int taste, String name) {
         super(age, taste);
@@ -24,4 +24,5 @@ public class Apple extends Fruit {
                 ", taste=" + taste +
                 '}';
     }
+
 }
