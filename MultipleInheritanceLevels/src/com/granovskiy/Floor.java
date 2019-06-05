@@ -3,6 +3,7 @@ package com.granovskiy;
 import java.util.Arrays;
 
 public class Floor {
+    private static final int DEFAULT_APARTMENT_CAPACITY = 4;
     private int number;
     private Apartment[] apartments;
 
@@ -10,13 +11,18 @@ public class Floor {
         this.number = number;
         this.apartments = new Apartment[apartmentsCount];
         for (int index = 0; index < apartmentsCount; index++) {
-            apartments[index] = new Apartment(numbers.getNext());
+            apartments[index] = new Apartment(numbers.getNext(), DEFAULT_APARTMENT_CAPACITY);
         }
     }
 
 
     public Apartment getFreeApartment() {
-        return null; //  TODO implement me
+        for (Apartment apartment : apartments) {
+            if(apartment.isFree()) {
+                return apartment;
+            }
+        }
+        return null;
     }
 
     @Override

@@ -8,4 +8,8 @@ public class Owner {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Owner: " + name;
+    }
 }
